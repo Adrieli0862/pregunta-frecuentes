@@ -1,55 +1,58 @@
 
 
+*{
+  margin: 0;
+  padding: 0;
 
-
-body {
-background-image: url("../img/inicio.png");
-background-size: center center;
-background-repeat: no-repeat;
-background-position: center;
-background-attachment: fixed;
 }
-    
 
-/*
+.body {
+background-image: url("../img/inicio.png");
+background-size: contain;/* */
+background-repeat: no-repeat;/* para que la imagen no  se repita en la pantalla  */
+background-position: center;/* centra imagen*/
+
+width: 250px;/* */
+height: 250px;/* */
+
+}
+
 
 .contenedor {
-
-    
-    background-image: url("inicio.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    }
-
-    */
-
-
+    width: 100%;/* */
+    height: 100%;/* */
+    text-align: center;
+    padding-top:50 ;
+}
 
  /* Estilo para el botón */
 
+
+
 .boton1 {
-    display: inline-block;
-    background-color: #426b87;
-    color: white;
+   
+    background-color: #426b87; /*determina el tamaño del boton */
+    color: white;/*determina el color de las letras*/
+    padding: 10px 20px;/* deterina el tamaño del boton*/
+    text-decoration: none; /* le quita el subrayado o  decoración */
+    border-radius: 5px; /* hace e boton con forma rectangular sin puntas*/
+    position: absolute;/*posiciona el boton dentro de la imagen*/
+    margin: 4px 2px;
+    font-size: 16px;
+    cursor: pointer;/*aparece la manita cuando pasamos sobre el boton */
     padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    border: none;
-    font-size: 18px;
-    
-}
+    text-align: center; /* se centra el boton */
+    bottom: -5px; /* esto define la pocision de abajo hacia arriba*/
+    transform: translateX(-50%);
+
+}   
 
 /* Cambio de estilo al pasar el mouse sobre el botón */
 .boton1:hover {
     background-color: #2980b9;
 }
+
+
     
 
 img {
@@ -59,7 +62,14 @@ img {
 }
 
 .container {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    background-color: bisque;
+    padding: 35px;
+
+    
+    width: 90%;
+    margin: 100px auto;
 }
 
 .container-faq {
@@ -78,6 +88,8 @@ img {
     margin-bottom: 20px;
     border-radius: 10px;
 }
+
+
 
 .container-faq .item-faq .question {
     position: relative;

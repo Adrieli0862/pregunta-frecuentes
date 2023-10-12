@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregunta con Imágenes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pregunta con Imágenes</h1>
+        <p>Pregunta: ¿Cuál de las siguientes opciones es correcta?</p>
+        <ul id="opciones">
+            <li data-respuesta="opcion1">Respuesta 1</li>
+            <li data-respuesta="opcion2">Respuesta 2</li>
+            <li data-respuesta="opcion3">Respuesta 3</li>
+            <li data-respuesta="opcion4">Respuesta 4</li>
+        </ul>
+        <div id="respuesta">
+
+
+            document.addEventListener("DOMContentLoaded", function () {
+                const opciones = document.querySelectorAll("#opciones li");
+                const imagen = document.getElementById("imagen");
+            
+                opciones.forEach(function (opcion) {
+                    opcion.addEventListener("click", function () {
+                        const respuesta = opcion.getAttribute("data-respuesta");
+                        mostrarImagen(respuesta);
+                    });
+                });
+            
+                function mostrarImagen(respuesta) {
+                    if (respuesta === "opcion1") {
+                        imagen.src = "resena.png";
+                    } else if (respuesta === "opcion2") {
+                        imagen.src = "imagen2.jpg";
+                    } else if (respuesta === "opcion3") {
+                        imagen.src = "imagen3.jpg";
+                    } else if (respuesta === "opcion4") {
+                        imagen.src = "imagen4.jpg";
+                    }
+            
+                    imagen.style.display = "block";
+                }
+            });
+
+
+
+            <img src="" id="imagen" alt="Imagen">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

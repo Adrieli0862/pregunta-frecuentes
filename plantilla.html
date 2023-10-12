@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>casos clinicos </title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+    <div class="contenedor">
+        <div style="text-align:center;"> 
+
+            <a href= "C:\xampp\htdocs\casosinicio\pregunta-frecuentes\examen.html" class="boton1">Siguiente</a>
+        </div>
+    </div> 
+            
+    <div class="contenedor">
+            <img class="img-fluid animated zoomIn" src="listap.png" alt="">
+              </div>
+        
+    
+
+   <form id="examenForm">
+        <label for="pregunta1">Pregunta 1: ¿Cuál es la capital de Francia?</label><br>
+        <input type="radio" name="pregunta1" value="paris"> París<br>
+        <input type="radio" name="pregunta1" value="londres"> Londres<br>
+        <input type="radio" name="pregunta1" value="berlin"> Berlín<br>
+        <br>
+
+        <label for="pregunta2">Pregunta 2: ¿Cuál es el color del cielo en un día despejado?</label><br>
+        <input type="radio" name="pregunta2" value="azul"> Azul<br>
+        <input type="radio" name="pregunta2" value="rojo"> Rojo<br>
+        <input type="radio" name="pregunta2" value="verde"> Verde<br>
+        <br>
+
+        <input type="submit" value="Enviar respuestas">
+    </form>
+
+    <div id="resultado"></div>
+
+    <script>
+        document.getElementById('examenForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita que se envíe el formulario por defecto
+
+            // Obtén las respuestas del formulario
+            var respuesta1 = document.querySelector('input[name="pregunta1"]:checked');
+            var respuesta2 = document.querySelector('input[name="pregunta2"]:checked');
+
+            // Verifica las respuestas y proporciona retroalimentación
+            var resultado = document.getElementById('resultado');
+            resultado.innerHTML = '';
+
+            if (respuesta1 && respuesta2) {
+                if (respuesta1.value === 'paris' && respuesta2.value === 'azul') {
+                    resultado.innerHTML = '¡Respuestas correctas!';
+                } else {
+                    resultado.innerHTML = 'Al menos una respuesta es incorrecta.';
+                }
+            } else {
+                resultado.innerHTML = 'Por favor, responde todas las preguntas.';
+            }
+        });
+        <script src="./scripts.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+    <script src="./scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>caso clinico</title>
+    <link rel="stylesheet" href="./style.css">
+
+   
+</head>
+<body>
+    
+                
+          
+        
+
+   
+  
+            <div id="seccion1" style="display: none;">
+                <div class="Pregunta"></div>
+       
+            <img class="img-fluid animated zoomIn" src="img/listadp.png" alt=""  style="width: 700px ; height: 450px ;">
+       
+   
+        <div class="Pregunta">
+    <form id="examenForm">
+         
+
+        <p><font face="Verdana, Arial, Helvetica, sans-serif" size="3"></p>
+        <label for="pregunta1"><h3>Pregunta 1: Seleccione la opción correcta: </h3> </label><br>
+        <input type="radio" name="pregunta1" value="1">  
+        <nav>
+        <ul>
+        <p> I Poliuria/polidipsia (3,8,9)</p>
+        <P>II Dificultad para saltar (4,5,6)</P>
+        <P>III Sobrepeso</P>
+        </ul>
+        </nav>
+        
+        <input type="radio" name="pregunta1" value="2"> 
+        <nav>
+        <ul>
+        <p> I vómito (1,2,3,4,9)</p>
+        <P> II Posición plantígrada  bilateral (7,8,9)</P>
+        </ul>
+        </nav>
+
+        <input type="radio" name="pregunta1" value="3"><br>
+        <nav>
+            <ul>
+            <p> I Poliuria/polidipsia (3,4,5)</p>
+            <P>II Posición plantígrada bilateral (7,8,9)</P>
+            <P>III Sobrepeso</P>
+            </ul>
+            </nav>
+
+        <input type="radio" name="pregunta1" value="4"> 
+        <nav>
+            <ul>
+            <p> I Pérdida de peso (1,2,5) </p>
+            <P>II Atrofia muscular (7,8,10) </P>
+        
+            </ul>
+            </nav>
+
+        <br>
+
+        <input type="submit"  class="boton2" value="Enviar respuestas"; >
+    </form>
+</div>
+   
+    <div id="resultado"></div>
+    </div>
+
+    <script>
+     
+        document.getElementById('examenForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita que se envíe el formulario por defecto
+
+            // Obtén las respuestas del formulario
+            var respuesta1 = document.querySelector('input[name="pregunta1"]:checked');
+
+            // Verifica las respuestas y proporciona retroalimentación
+            var resultado = document.getElementById('resultado');
+            resultado.innerHTML = '';
+
+            if (respuesta1) {
+                if (respuesta1.value === '1') {
+                    window.location.href = "retro.html#seccion1"; // Reemplaza con la URL de tu cuestionario 
+
+                } else if  (respuesta1.value === '2') {
+                    window.location.href = "retro.html#seccion2"; // Reemplaza con la URL de tu cuestionario
+    
+
+                } else if (respuesta1.value === '3') {
+                    window.location.href = "retro.html#seccion3"; 
+
+
+                } else if (respuesta1.value === '4') {
+                    window.location.href = "retro.html#seccion4";
+                } else {
+                resultado.innerHTML = 'Por favor, responde todas las preguntas.';
+                imagen.style.display = "block";
+               
+    
+                
+            }}
+        });
+
+      
+    </script>
+
+
+     
+
+</div>    
+</body>
+</html>
+

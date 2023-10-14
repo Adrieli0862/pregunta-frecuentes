@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>caso clinico</title>
+    <link rel="stylesheet" href="./style.css">
+
+         
+</head>
+
+<body>
+    
+
+<body>
+    <div id="pregunta">
+        <p><h1>PRUEBAS DIAGNÓSTICAS:</h1></p>
+        <p><h1></h1> Elige la opción correcta: </h2>  </p>
+        <p><h2>Perfil integral (hemograma, bioquímica sanguínea, urianálisis con urocultivo) </h2>   </p>
+        
+    <div class="rectangulo2">
+        <label for="verdadero">SI   </label>
+        <input type="radio" id="verdadero" name="respuesta" value="verdadero"> 
+
+    </div>
+    <div class="rectangulo2">
+        <label for="falso"> NO    </label>
+    
+        <input type="radio" id="falso" name="respuesta" value="falso">
+    </div>
+    </div>
+
+    <input type="submit"  class="boton1" value="Enviar respuestas"; onclick="verificarRespuesta()" >
+
+        <p id="resultado"></p>
+    </div>
+
+    <script>
+        function verificarRespuesta() {
+            var respuestaElegida = document.querySelector('input[name="respuesta"]:checked');
+            var resultado = document.getElementById('resultado');
+
+            if (respuestaElegida) {
+                if (respuestaElegida.value === 'verdadero') {
+                    window.location.href = "retro.html#seccion9"; 
+                } else {
+                    window.location.href = "retro.html#seccion10"; 
+                }
+            } else {
+                resultado.textContent = 'Por favor, elige una respuesta.';
+            }
+        }
+    </script>
+</body>
+</html>

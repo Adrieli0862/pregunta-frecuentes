@@ -15,23 +15,22 @@
 
 <body>
     <div id="pregunta">
-        <p><h1>PRUEBAS DIAGNÓSTICAS:</h1></p>
-        <p><h1></h1> Elige la opción correcta: </h2>  </p>
-        <p><h2>Perfil integral (hemograma, bioquímica sanguínea, urianálisis con urocultivo) </h2>   </p>
-        
- 
-        <label for="verdadero">SI   </label>
-        <input type="radio" id="verdadero" name="respuesta" value="verdadero"> 
-
-  
-        <label for="falso"> NO  </label>
-        <input type="radio" id="falso" name="respuesta" value="falso">
+        <p><h1>PRUEBAS DIAGNÓSTICAS COMPLEMENTARIAS </h1></p>
+        <p><h2>Seleccione la opción requerida: </h2>  </p>
+           <p> <h2>Fructosamina</h2></p>
    
-    <input type="submit"  class="boton5" value="Enviar respuestas"; onclick="verificarRespuesta()" >
-
-        <p id="resultado"></p>
-    </div>
-
+           <label for="verdadero">SI   </label>
+           <input type="radio" id="verdadero" name="respuesta" value="verdadero"> 
+   
+     
+           <label for="falso"> NO  </label>
+           <input type="radio" id="falso" name="respuesta" value="falso">
+      
+       <input type="submit"  class="boton5" value="Enviar respuestas"; onclick="verificarRespuesta()" >
+   
+           <p id="resultado"></p>
+       </div>
+   
     <script>
         function verificarRespuesta() {
             var respuestaElegida = document.querySelector('input[name="respuesta"]:checked');
@@ -39,9 +38,11 @@
 
             if (respuestaElegida) {
                 if (respuestaElegida.value === 'verdadero') {
-                    window.location.href = "retro.html#seccion9"; 
+                    window.location.href = "retro.html#seccion11"; 
+                    
                 } else {
-                    window.location.href = "retro.html#seccion10"; 
+                    window.location.href = "retro.html#seccion"; 
+                    window.location.href = "retro.html#seccion12";
                 }
             } else {
                 resultado.textContent = 'Por favor, elige una respuesta.';

@@ -8,20 +8,20 @@
     <link rel="stylesheet" href="./style.css">
 
    
+        
 </head>
+
+
 <body>
     
-              
-          
-
+                
    
+
              
     <div class="container">        
         <div style="text-align:center;"> 
-  
-    <div class="seccion" id="seccion1">
-       
-            <img class="img-fluid animated zoomIn" src="img/listadp.png" alt=""  style="width: 500px ; height: 400px ;">
+    <div class="seccion" id="seccion2">
+    
        
    
         <div class="Pregunta">
@@ -29,58 +29,74 @@
          
 
         <p><font face="Verdana, Arial, Helvetica, sans-serif" size="3"></p>
-        <label for="pregunta1"><h3>Pregunta 1: Seleccione la opción correcta: </h3> </label><br>
-        <input type="radio" name="pregunta1" value="1">  
+        <label for="pregunta2"><h1>Plan terapéutico  </h1> </label>
+        <label for="pregunta2"><h2>Seleccione la opción correcta:  </h2> </label>
+
+        <div class="rectangulo">
+        <input type="radio" name="pregunta2" value="1">  
         <nav>
         <ul>
-        <p> I Poliuria/polidipsia (3,8,9)</p>
-        <P>II Dificultad para saltar (4,5,6)</P>
-        <P>III Sobrepeso</P>
-        </ul>
+        <p>Insulina ultralenta (glargina).        </p>
+        <P>Dieta alta en fibra y proteínas, baja en carbohidratos. </P>
+        <p>Ejercicio.  </p>
+              </ul>
         </nav>
-        
-        <input type="radio" name="pregunta1" value="2"> 
+        </div>
+
+
+        <div class="rectangulo">
+        <input type="radio" name="pregunta2" value="2"> 
         <nav>
         <ul>
-        <p> I vómito (1,2,3,4,9)</p>
-        <P> II Posición plantígrada  bilateral (7,8,9)</P>
+        <p>Insulina intermedia (NPH).</p>
+        <P> Dieta casera alta en fibra.   </P>
+        <p>   Reposo. </p>
         </ul>
         </nav>
+    </div>
 
-        <input type="radio" name="pregunta1" value="3"><br>
+
+ <div class="rectangulo">
+        <input type="radio" name="pregunta2" value="3"><br>
         <nav>
             <ul>
-            <p> I Poliuria/polidipsia (3,4,5)</p>
-            <P>II Posición plantígrada bilateral (7,8,9)</P>
-            <P>III Sobrepeso</P>
+            <p> Insulina ultralenta (glargina).    </p>
+            <P>Dieta baja en proteína, baja en fibra  </P>
+            <p>  Ejercicio   </p>
             </ul>
             </nav>
+        </div>
 
-        <input type="radio" name="pregunta1" value="4"> 
+
+        <div class="rectangulo">
+        <input type="radio" name="pregunta2" value="4"> 
         <nav>
             <ul>
-            <p> I Pérdida de peso (1,2,5) </p>
-            <P>II Atrofia muscular (7,8,10) </P>
+            <p>Insulina regular (rápida o cristalina).       </p>
+            <P>Dieta baja en fibra, baja en proteína.     </P>
+            <p> Reposo.   </p>
         
             </ul>
             </nav>
+        </div>
 
         <br>
 
-        <input type="submit"  class="boton8" value="Enviar respuestas"; >
+        <input type="submit"  class="boton5" value="Enviar respuestas"; >
     </form>
 </div>
    
     <div id="resultado"></div>
     </div>
-
+</div>
+</div>
     <script>
      
         document.getElementById('examenForm').addEventListener('submit', function(event) {
             event.preventDefault(); // Evita que se envíe el formulario por defecto
 
             // Obtén las respuestas del formulario
-            var respuesta1 = document.querySelector('input[name="pregunta1"]:checked');
+            var respuesta1 = document.querySelector('input[name="pregunta2"]:checked');
 
             // Verifica las respuestas y proporciona retroalimentación
             var resultado = document.getElementById('resultado');
@@ -88,18 +104,18 @@
 
             if (respuesta1) {
                 if (respuesta1.value === '1') {
-                    window.location.href = "retro.html#seccion1"; // Reemplaza con la URL de tu cuestionario 
+                    window.location.href = "retro.html#seccion22"; 
 
                 } else if  (respuesta1.value === '2') {
-                    window.location.href = "retro.html#seccion2"; // Reemplaza con la URL de tu cuestionario
+                    window.location.href = "retro.html#seccion23"; 
     
 
                 } else if (respuesta1.value === '3') {
-                    window.location.href = "retro.html#seccion3"; 
+                    window.location.href = "retro.html#seccion24"; 
 
 
                 } else if (respuesta1.value === '4') {
-                    window.location.href = "retro.html#seccion4";
+                    window.location.href = "retro.html#seccion25";
                 } else {
                 resultado.innerHTML = 'Por favor, responde todas las preguntas.';
                 imagen.style.display = "block";
@@ -112,8 +128,7 @@
       
     </script>
 
-
-     
+   
 
 </div>    
 </body>
